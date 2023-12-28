@@ -39,6 +39,7 @@ open mysql command line type following commands
 ==>>>>>>Create table keeth (sno Integer,date varchar(35), customer varchar (50), mob_no integer,address varchar(100),medname varchar(50) not null,qty integer , price integer, paymode varchar (50) not null);
 
 Then open main.py file with notepad.
+
 on line 14,25,40,56 ===> mycon = pymysql.connect(host = "localhost", user = "root", password = "Your password", database = "mysql") 
 
 ==>here change "your password" the sql command line password of your system.
