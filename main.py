@@ -11,7 +11,7 @@ import pymysql
 import pymysql.cursors
 from PyQt5.QtCore import *
 
-mycon = pymysql.connect(host = "localhost", user = "root", password = "your password", database = "select your database",cursorclass=pymysql.cursors.DictCursor) 
+mycon = pymysql.connect(host = "localhost", user = "root", password = "your password", database = "mysql",cursorclass=pymysql.cursors.DictCursor) 
 cursor = mycon.cursor()
 
 
@@ -22,7 +22,7 @@ engine.setProperty('voice', voices[0].id)
 engine.setProperty('rate', 170)
 
 def updateRecord(ss,tt,uu,vv,ww,xx,bb):
-      mycon = pymysql.connect(host = "localhost", user = "root", password = "your password", database = "select your database") 
+      mycon = pymysql.connect(host = "localhost", user = "root", password = "your password", database = "mysql") 
       cursor = mycon.cursor()
       do = "insert into keeth values(" + "'"+ss+"'" +","+"'"+tt+"'"+"," +"'"+ uu +"'" +","+ "'"+vv+"'" + ","+"'"+ww+"'" + ","+"'" +xx+"'" ",""'"+bb+"'" +");"
       print(do)
@@ -37,7 +37,7 @@ def updateRecord(ss,tt,uu,vv,ww,xx,bb):
       retval = msg.exec_()
 
 def deleteRecord(bsss):
-      mycon = pymysql.connect(host = "localhost", user = "root", password = "Your passowrd", database = "select your database") 
+      mycon = pymysql.connect(host = "localhost", user = "root", password = "Your passowrd", database = "mysql") 
       cursor = mycon.cursor()
       do = "delete from keeth where BS_G_id = " "'"+bsss+"'"+ ";"
       print(do)
@@ -53,7 +53,7 @@ def deleteRecord(bsss):
       mycon.close()
 
 def find_record(finee):
-      mycon = pymysql.connect(host = "localhost", user = "root", password = "your password", database = "select your database")
+      mycon = pymysql.connect(host = "localhost", user = "root", password = "your password", database = "mysql")
       cursor = mycon.cursor()
       doo = "select * from keeth where BS_G_id =" +"'"+ finee +"';"
       print(doo)
