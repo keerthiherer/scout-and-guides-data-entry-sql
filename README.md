@@ -30,7 +30,8 @@ Before running the programe install the following:
 
 ====> pip install sys
 
-///Then Do this*****
+///Then Do this
+
 open mysql command line type following commands
 
 ==>>>>>>use mysql;
