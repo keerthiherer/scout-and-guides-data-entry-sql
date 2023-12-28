@@ -10,6 +10,13 @@ where you can.
 
 ----> easy to use (graphical user interface)
 
+program required to run this programe;
+
+::::install mysql.
+
+::::install python or python3.
+
+::::and other following pip packages.
 
 Before running the programe install the following:
 ====> pip install pyautogui
@@ -22,10 +29,21 @@ Before running the programe install the following:
 
 ====> pip install sys
 
-Then start main file..
-run : python main.py
+*****Then Do this*****
+open mysql command line type following commands
 
+>>>>>>use mysql;
 
+>>>>>>Create table keeth (sno Integer,date varchar(35), customer varchar (50), mob_no integer,address varchar(100),medname varchar(50) not null,qty integer , price integer, paymode varchar (50) not null);
+
+Then open main.py file with notepad.
+on line 14,25,40,56 ===> mycon = pymysql.connect(host = "localhost", user = "root", password = "Your password", database = "mysql") 
+
+>>>here change "your password" the sql command line password of your system.
+
+>>>here change "user" if different from others
+
+Then save the main.py file and then run the python file.
 
 
 ![Capture](https://github.com/keerthiherer/scout-and-guides-data-entry-sql/assets/136905413/94f52598-21e0-476a-bd8d-4c70501a0c7c)
