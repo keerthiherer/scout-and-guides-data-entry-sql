@@ -89,6 +89,11 @@ if __name__ == "__main__":
     bg.setGeometry(0,0,1600,739)
     bg.show()
 
+    bg2 = QLabel(w)
+    bg2.setPixmap(QPixmap('nam.jpg'))
+    bg2.setGeometry(650,150,300,300)
+    bg2.show()
+      
     btn = QLabel(w)
     btn.setText("NAME:")
     btn.setGeometry(30,40,180,40)
