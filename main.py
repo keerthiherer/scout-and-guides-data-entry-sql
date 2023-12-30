@@ -204,7 +204,12 @@ if __name__ == "__main__":
     btn8.setStyleSheet("background-color:violet; color:white; border-style:outset;padding:2px; font:bold 20px;")
     def find():
           text2,ddd = QtWidgets.QInputDialog.getText(w,"Find", "Enter the BS&G UID to find Record of:")
-          find_record(text2)
+          if text2 == "":
+                text3,ddd = QtWidgets.QInputDialog.getText(w,"Find", "Enter the BS&G UID to find Record of. If you again it is empty. the box will close:")
+                find_record(text3)
+          else:
+                find_record(text2)
+         # find_record(text2)
     btn8.clicked.connect(find)
     btn8.show()
 
@@ -283,10 +288,12 @@ if __name__ == "__main__":
                msg.setIcon(QMessageBox.Warning)
                msg.setText("Bharth scout and guides id can't be empty")
                msg.setWindowTitle("Alert MessageBox")
-               msg.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)      
-         updateRecord(s,t,u,v,w,x,bs)   
-         in1.clear(),in2.clear(),in3.clear(),in4.clear(),in5.clear(),in6.clear(),in7.clear()
-         print(s,t,u,v,w,x,bs)
+               msg.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+               
+         else: 
+               updateRecord(s,t,u,v,w,x,bs)   
+               in1.clear(),in2.clear(),in3.clear(),in4.clear(),in5.clear(),in6.clear(),in7.clear()
+               print(s,t,u,v,w,x,bs)
     btn6.clicked.connect(you)
     btn6.show()
     
