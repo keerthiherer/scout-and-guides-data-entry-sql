@@ -193,7 +193,11 @@ if __name__ == "__main__":
     btn7.setStyleSheet("background-color:red; color:white; border-style:outset;padding:2px; font:bold 20px;")
     def dell():
             text,ddu = QtWidgets.QInputDialog.getText(w,"DELETE","Enter the BS&G UID to delete:")
-            deleteRecord(text)
+            if text == "":
+                  textd,ddu = QtWidgets.QInputDialog.getText(w,"DELETE","Enter the BS&G UID to delete, if again the box is empty error will generated:")
+                  deleteRecord(textd)
+            else:
+                  deleteRecord(text)
 
     btn7.clicked.connect(dell)
     btn7.show()
