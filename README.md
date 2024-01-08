@@ -30,6 +30,8 @@ Before running the programe install the following:
 
 ====> pip install sys
 
+====> pip install cryptography
+
 ==>Then Do this
 
 open mysql command line type following commands
